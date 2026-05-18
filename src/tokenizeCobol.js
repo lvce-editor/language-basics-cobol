@@ -305,7 +305,7 @@ const tokenizeSequenceArea = (prefix, tokens) => {
 }
 
 const tokenizeTopLevel = (part, tokens) => {
-  if (part.match(RE_INLINE_COMMENT)) {
+  if (RE_INLINE_COMMENT.test(part)) {
     pushToken(tokens, TokenType.Comment, part.length)
     return {
       consumed: part.length,

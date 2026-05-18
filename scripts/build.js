@@ -14,7 +14,7 @@ fs.mkdirSync(path.join(root, 'dist'))
 fs.copyFileSync(join(root, 'README.md'), join(root, 'dist', 'README.md'))
 fs.copyFileSync(
   join(root, 'extension.json'),
-  join(root, 'dist', 'extension.json')
+  join(root, 'dist', 'extension.json'),
 )
 fs.cpSync(join(root, 'src'), join(root, 'dist', 'src'), { recursive: true })
 
