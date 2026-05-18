@@ -1,0 +1,15 @@
+{
+  "id": "builtin.language-basics-c",
+  "name": "Language Basics C",
+  "description": "Provides syntax highlighting and bracket matching in C files.",
+  "languages": [
+    {
+      "id": "c",
+      "extensions": [
+        ".c"
+      ],
+      "tokenize": "src/tokenizeC.js"
+    }
+  ],
+  "repository": "https://github.com/lvce-editor/language-basics-c"
+}
