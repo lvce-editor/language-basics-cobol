@@ -53,7 +53,7 @@ Punctuation
 Whitespace
 Keyword
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation

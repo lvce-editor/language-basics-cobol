@@ -157,7 +157,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 Numeric
 NewLine
@@ -173,7 +173,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 KeywordControl
 Whitespace
@@ -185,7 +185,7 @@ KeywordOperator
 Whitespace
 KeywordOperator
 Whitespace
-LanguageConstant
+Keyword
 Punctuation
 Whitespace
 Numeric

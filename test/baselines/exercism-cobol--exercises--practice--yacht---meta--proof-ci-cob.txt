@@ -33,7 +33,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -47,24 +47,12 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Punctuation
 Numeric
 Punctuation
-Punctuation
-NewLine
-Whitespace
-Whitespace
-Whitespace
-Numeric
-Whitespace
-VariableName
-Whitespace
-KeywordOperator
-Whitespace
-Numeric
 Punctuation
 NewLine
 Whitespace
@@ -81,6 +69,18 @@ Punctuation
 NewLine
 Whitespace
 Whitespace
+Whitespace
+Numeric
+Whitespace
+VariableName
+Whitespace
+KeywordOperator
+Whitespace
+Numeric
+Punctuation
+NewLine
+Whitespace
+Whitespace
 Numeric
 Whitespace
 VariableName
@@ -97,7 +97,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Whitespace
@@ -120,7 +120,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Whitespace
@@ -135,7 +135,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -174,7 +174,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Whitespace
@@ -193,7 +193,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Whitespace
@@ -208,7 +208,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Punctuation
@@ -218,18 +218,6 @@ Whitespace
 Numeric
 Whitespace
 VariableName
-Punctuation
-NewLine
-Whitespace
-Whitespace
-Whitespace
-Numeric
-Whitespace
-VariableName
-Whitespace
-KeywordOperator
-Whitespace
-Numeric
 Punctuation
 NewLine
 Whitespace
@@ -251,7 +239,19 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+KeywordOperator
+Whitespace
+Numeric
+Punctuation
+NewLine
+Whitespace
+Whitespace
+Whitespace
+Numeric
+Whitespace
+VariableName
+Whitespace
+Function
 Whitespace
 Numeric
 Whitespace
@@ -267,7 +267,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Whitespace
@@ -293,7 +293,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 Whitespace
@@ -317,7 +317,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 NewLine
 Whitespace
@@ -325,7 +325,7 @@ Whitespace
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Function
 NewLine
 Whitespace
 Whitespace
@@ -341,7 +341,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 NewLine
 Whitespace
@@ -349,7 +349,7 @@ Whitespace
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Function
 NewLine
 Whitespace
 Whitespace
@@ -365,7 +365,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 NewLine
 Whitespace
@@ -373,7 +373,7 @@ Whitespace
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Function
 NewLine
 Whitespace
 Whitespace
@@ -389,7 +389,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 NewLine
 Whitespace
@@ -397,7 +397,7 @@ Whitespace
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Function
 NewLine
 Whitespace
 Whitespace
@@ -413,7 +413,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 NewLine
 Whitespace
@@ -421,7 +421,7 @@ Whitespace
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Function
 NewLine
 Whitespace
 Whitespace
@@ -437,7 +437,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 NewLine
 Whitespace
@@ -445,7 +445,7 @@ Whitespace
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Function
 NewLine
 Whitespace
 Whitespace
@@ -461,7 +461,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 NewLine
 Whitespace
@@ -469,7 +469,7 @@ Whitespace
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Function
 NewLine
 Whitespace
 Whitespace
@@ -485,7 +485,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 NewLine
 Whitespace
@@ -493,7 +493,7 @@ Whitespace
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Function
 NewLine
 Whitespace
 Whitespace
@@ -509,7 +509,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 NewLine
 Whitespace
@@ -517,7 +517,7 @@ Whitespace
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Function
 NewLine
 Whitespace
 Whitespace
@@ -533,7 +533,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 NewLine
 Whitespace
@@ -541,7 +541,7 @@ Whitespace
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Function
 NewLine
 Whitespace
 Whitespace
@@ -557,7 +557,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 NewLine
 Whitespace
@@ -565,7 +565,7 @@ Whitespace
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Function
 NewLine
 Whitespace
 Whitespace
@@ -581,7 +581,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 NewLine
 Whitespace
@@ -589,7 +589,7 @@ Whitespace
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Function
 NewLine
 Whitespace
 Whitespace
@@ -622,7 +622,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -634,7 +634,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -715,7 +715,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -727,7 +727,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -808,7 +808,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -820,7 +820,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -901,7 +901,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -913,7 +913,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -994,7 +994,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -1006,7 +1006,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -1087,7 +1087,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -1099,7 +1099,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -1180,7 +1180,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -1235,7 +1235,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -1290,7 +1290,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -1302,7 +1302,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -1487,7 +1487,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -1499,7 +1499,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -1687,7 +1687,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -1771,7 +1771,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -1783,7 +1783,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace

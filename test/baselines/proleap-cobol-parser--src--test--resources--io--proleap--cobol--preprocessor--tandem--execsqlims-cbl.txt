@@ -173,7 +173,7 @@ KeywordOperator
 Whitespace
 KeywordOperator
 Whitespace
-LanguageConstant
+Keyword
 Punctuation
 NewLine
 NewLine

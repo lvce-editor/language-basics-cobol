@@ -99,7 +99,7 @@ Whitespace
 Whitespace
 VariableName
 Whitespace
-LanguageConstant
+Keyword
 Punctuation
 Numeric
 Punctuation

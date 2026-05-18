@@ -22,9 +22,9 @@ NewLine
 Numeric
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
-Keyword
+Function
 Whitespace
 KeywordOperator
 Whitespace

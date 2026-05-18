@@ -108,7 +108,7 @@ VariableName
 Whitespace
 KeywordOperator
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Whitespace
 Whitespace
@@ -119,7 +119,7 @@ VariableName
 Whitespace
 KeywordOperator
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Whitespace
 Whitespace
@@ -523,7 +523,7 @@ VariableName
 Whitespace
 KeywordOperator
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Whitespace
 Whitespace
@@ -534,7 +534,7 @@ VariableName
 Whitespace
 KeywordOperator
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Whitespace
 Whitespace
@@ -934,7 +934,7 @@ VariableName
 Whitespace
 KeywordOperator
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Whitespace
 Whitespace
@@ -945,7 +945,7 @@ VariableName
 Whitespace
 KeywordOperator
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Whitespace
 Whitespace
@@ -1655,7 +1655,7 @@ VariableName
 Whitespace
 Punctuation
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Whitespace
 Whitespace

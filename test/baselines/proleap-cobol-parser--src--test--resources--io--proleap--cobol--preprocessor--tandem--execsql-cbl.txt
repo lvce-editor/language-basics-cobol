@@ -75,7 +75,7 @@ PlainText
 PlainText
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation

@@ -53,7 +53,7 @@ Whitespace
 Whitespace
 VariableName
 Whitespace
-LanguageConstant
+Keyword
 PunctuationString
 String
 NewLine

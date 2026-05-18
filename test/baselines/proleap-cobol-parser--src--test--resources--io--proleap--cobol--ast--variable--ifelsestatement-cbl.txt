@@ -36,7 +36,7 @@ KeywordControl
 Whitespace
 Punctuation
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Numeric
 Whitespace

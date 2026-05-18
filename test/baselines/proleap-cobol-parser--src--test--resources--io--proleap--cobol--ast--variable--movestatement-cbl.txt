@@ -45,7 +45,7 @@ Function
 Whitespace
 Keyword
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace

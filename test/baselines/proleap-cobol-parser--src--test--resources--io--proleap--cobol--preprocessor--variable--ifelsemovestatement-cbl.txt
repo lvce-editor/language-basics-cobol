@@ -34,7 +34,7 @@ VariableName
 Whitespace
 Punctuation
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Numeric
 Whitespace
