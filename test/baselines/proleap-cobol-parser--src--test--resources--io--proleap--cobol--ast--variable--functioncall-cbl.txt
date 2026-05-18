@@ -597,7 +597,7 @@ Function
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Whitespace
 Punctuation
 Numeric
@@ -644,7 +644,7 @@ Function
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Whitespace
 Punctuation
 Numeric
@@ -691,7 +691,7 @@ Function
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Whitespace
 Punctuation
 Numeric
@@ -719,7 +719,7 @@ Function
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Whitespace
 Punctuation
 Numeric
@@ -766,7 +766,7 @@ Function
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Whitespace
 Punctuation
 Numeric
@@ -813,7 +813,7 @@ Function
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Whitespace
 Punctuation
 Numeric

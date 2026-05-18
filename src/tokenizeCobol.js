@@ -62,20 +62,29 @@ const RE_SINGLE_QUOTE_ESCAPE = /^''/
 const RE_DOUBLE_QUOTE_CONTENT = /^[^"]+/
 const RE_SINGLE_QUOTE_CONTENT = /^[^']+/
 const RE_END_PROGRAM = /^end +program\b/i
+const RE_FUNCTION_CALL = /^(function)( +)([A-Za-z][A-Za-z0-9_-]*)/i
+const RE_WORD_OR_LABEL = /^(?:[A-Za-z][A-Za-z0-9_-]*|\d[A-Za-z0-9_-]*)/
+const RE_PERFORM_TARGET = /^(perform)( +)([A-Za-z0-9][A-Za-z0-9_-]*)\b/i
+const RE_THRU_TARGET = /^(thru|through)( +)([A-Za-z0-9][A-Za-z0-9_-]*)\b/i
+const RE_ACCESS_MODE = /^(access)( +)(mode)\b/i
+const RE_FILE_STATUS = /^(file)( +)(status)\b/i
 
 const languageConstants = new Set([
   'FALSE',
+  'NULL',
+  'NULLS',
+  'TRUE',
+])
+
+const figurativeConstants = new Set([
   'HIGH-VALUE',
   'HIGH-VALUES',
   'LOW-VALUE',
   'LOW-VALUES',
-  'NULL',
-  'NULLS',
   'QUOTE',
   'QUOTES',
   'SPACE',
   'SPACES',
-  'TRUE',
   'ZERO',
   'ZEROES',
   'ZEROS',
@@ -144,7 +153,24 @@ const keywordOperators = new Set([
   'VALUE',
 ])
 
-const functionNames = new Set(['ACCEPT', 'DISPLAY', 'MOVE', 'PERFORM', 'TRIM'])
+const functionNames = new Set([
+  'ACCEPT',
+  'CLOSE',
+  'DISPLAY',
+  'ENTRY',
+  'MERGE',
+  'MOVE',
+  'OPEN',
+  'ORGANIZATION',
+  'PERFORM',
+  'PIC',
+  'PICTURE',
+  'READ',
+  'SELECT',
+  'SET',
+  'SORT',
+  'WRITE',
+])
 
 const keywords = new Set([
   'ADD',
@@ -266,6 +292,9 @@ const classifyWord = (value) => {
   if (languageConstants.has(upper)) {
     return TokenType.LanguageConstant
   }
+  if (figurativeConstants.has(upper)) {
+    return TokenType.Keyword
+  }
   if (functionNames.has(upper)) {
     return TokenType.FunctionName
   }
@@ -279,6 +308,13 @@ const classifyWord = (value) => {
     return TokenType.Keyword
   }
   return TokenType.VariableName
+}
+
+const isCallableTarget = (value) => {
+  if (/^\d/.test(value)) {
+    return true
+  }
+  return classifyWord(value) === TokenType.VariableName
 }
 
 const pushToken = (tokens, token, length) => {
@@ -345,6 +381,56 @@ const tokenizeTopLevel = (part, tokens) => {
     pushToken(tokens, TokenType.KeywordControl, endProgramMatch[0].length)
     return {
       consumed: endProgramMatch[0].length,
+      state: State.TopLevelContent,
+    }
+  }
+  const functionCallMatch = part.match(RE_FUNCTION_CALL)
+  if (functionCallMatch) {
+    pushToken(tokens, TokenType.Keyword, functionCallMatch[1].length)
+    pushToken(tokens, TokenType.Whitespace, functionCallMatch[2].length)
+    pushToken(tokens, TokenType.FunctionName, functionCallMatch[3].length)
+    return {
+      consumed: functionCallMatch[0].length,
+      state: State.TopLevelContent,
+    }
+  }
+  const performTargetMatch = part.match(RE_PERFORM_TARGET)
+  if (performTargetMatch && isCallableTarget(performTargetMatch[3])) {
+    pushToken(tokens, TokenType.FunctionName, performTargetMatch[1].length)
+    pushToken(tokens, TokenType.Whitespace, performTargetMatch[2].length)
+    pushToken(tokens, TokenType.FunctionName, performTargetMatch[3].length)
+    return {
+      consumed: performTargetMatch[0].length,
+      state: State.TopLevelContent,
+    }
+  }
+  const thruTargetMatch = part.match(RE_THRU_TARGET)
+  if (thruTargetMatch && isCallableTarget(thruTargetMatch[3])) {
+    pushToken(tokens, TokenType.KeywordOperator, thruTargetMatch[1].length)
+    pushToken(tokens, TokenType.Whitespace, thruTargetMatch[2].length)
+    pushToken(tokens, TokenType.FunctionName, thruTargetMatch[3].length)
+    return {
+      consumed: thruTargetMatch[0].length,
+      state: State.TopLevelContent,
+    }
+  }
+  const accessModeMatch = part.match(RE_ACCESS_MODE)
+  if (accessModeMatch) {
+    pushToken(tokens, TokenType.FunctionName, accessModeMatch[1].length)
+    pushToken(tokens, TokenType.Whitespace, accessModeMatch[2].length)
+    pushToken(tokens, TokenType.FunctionName, accessModeMatch[3].length)
+    return {
+      consumed: accessModeMatch[0].length,
+      state: State.TopLevelContent,
+    }
+  }
+  const fileStatusMatch = part.match(RE_FILE_STATUS)
+  if (fileStatusMatch) {
+    pushToken(tokens, TokenType.FunctionName, fileStatusMatch[1].length)
+    pushToken(tokens, TokenType.Whitespace, fileStatusMatch[2].length)
+    pushToken(tokens, TokenType.FunctionName, fileStatusMatch[3].length)
+    return {
+      consumed: fileStatusMatch[0].length,
       state: State.TopLevelContent,
     }
   }

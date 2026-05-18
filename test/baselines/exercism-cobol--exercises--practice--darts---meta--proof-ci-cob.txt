@@ -120,7 +120,7 @@ Punctuation
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Punctuation
 VariableName
 Whitespace

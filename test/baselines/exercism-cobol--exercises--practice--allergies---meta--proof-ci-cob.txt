@@ -300,7 +300,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace
@@ -402,7 +402,7 @@ KeywordControl
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Punctuation
 VariableName
 Punctuation
@@ -421,7 +421,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace

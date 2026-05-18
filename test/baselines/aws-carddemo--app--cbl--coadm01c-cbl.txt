@@ -624,7 +624,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace
@@ -733,7 +733,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace
@@ -1705,7 +1705,7 @@ Function
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Whitespace
 KeywordOperator
 Whitespace

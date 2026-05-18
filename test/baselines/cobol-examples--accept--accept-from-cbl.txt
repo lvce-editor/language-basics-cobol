@@ -523,7 +523,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 Keyword
 Whitespace

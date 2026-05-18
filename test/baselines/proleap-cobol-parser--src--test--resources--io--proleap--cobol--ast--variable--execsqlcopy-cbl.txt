@@ -31,7 +31,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation

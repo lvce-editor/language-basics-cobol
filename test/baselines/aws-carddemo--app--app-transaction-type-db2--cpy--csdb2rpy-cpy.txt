@@ -84,7 +84,7 @@ NewLine
 Numeric
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Whitespace
@@ -205,7 +205,7 @@ NewLine
 Numeric
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace

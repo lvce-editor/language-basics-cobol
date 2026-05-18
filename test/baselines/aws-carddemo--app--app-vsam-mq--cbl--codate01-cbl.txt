@@ -2183,7 +2183,7 @@ NewLine
 Numeric
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace
@@ -2500,7 +2500,7 @@ NewLine
 Numeric
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace
@@ -2832,7 +2832,7 @@ NewLine
 Numeric
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace
@@ -3465,7 +3465,7 @@ NewLine
 Numeric
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace

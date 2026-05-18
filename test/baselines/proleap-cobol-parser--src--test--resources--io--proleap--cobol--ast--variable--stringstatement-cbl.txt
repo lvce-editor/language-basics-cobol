@@ -31,7 +31,7 @@ PunctuationString
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Punctuation
 Numeric
 Punctuation

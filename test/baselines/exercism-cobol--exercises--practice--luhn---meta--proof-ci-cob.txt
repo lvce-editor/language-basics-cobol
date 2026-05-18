@@ -38,7 +38,7 @@ Whitespace
 Whitespace
 Keyword
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -201,7 +201,7 @@ Punctuation
 Whitespace
 VariableName
 Punctuation
-Function
+VariableName
 Punctuation
 VariableName
 Punctuation
@@ -341,7 +341,7 @@ KeywordControl
 Whitespace
 VariableName
 Punctuation
-Function
+VariableName
 Punctuation
 VariableName
 Punctuation
@@ -371,7 +371,7 @@ VariableName
 Punctuation
 VariableName
 Punctuation
-Function
+VariableName
 Punctuation
 VariableName
 Punctuation
@@ -418,7 +418,7 @@ Punctuation
 Whitespace
 VariableName
 Punctuation
-Function
+VariableName
 Punctuation
 VariableName
 Punctuation

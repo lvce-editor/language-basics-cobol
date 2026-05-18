@@ -149,7 +149,7 @@ KeywordControl
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Punctuation
 VariableName
 Punctuation

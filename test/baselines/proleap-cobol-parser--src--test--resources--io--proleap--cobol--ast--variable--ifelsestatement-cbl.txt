@@ -41,7 +41,7 @@ NewLine
 Numeric
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 Keyword
 Whitespace

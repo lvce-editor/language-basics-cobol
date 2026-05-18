@@ -45,7 +45,7 @@ Whitespace
 Whitespace
 Keyword
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -461,7 +461,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace
@@ -518,7 +518,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace
