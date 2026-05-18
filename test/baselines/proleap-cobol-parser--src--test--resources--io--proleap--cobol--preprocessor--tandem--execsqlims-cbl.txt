@@ -17,7 +17,7 @@ PlainText
 PlainText
 PlainText
 PlainText
-VariableName
+Function
 Punctuation
 Whitespace
 VariableName
@@ -173,7 +173,7 @@ KeywordOperator
 Whitespace
 KeywordOperator
 Whitespace
-LanguageConstant
+Keyword
 Punctuation
 NewLine
 NewLine

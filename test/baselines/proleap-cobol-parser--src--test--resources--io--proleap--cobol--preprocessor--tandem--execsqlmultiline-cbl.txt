@@ -17,7 +17,7 @@ PlainText
 PlainText
 PlainText
 PlainText
-VariableName
+Function
 Punctuation
 Whitespace
 VariableName
@@ -118,7 +118,7 @@ Whitespace
 Numeric
 PlainText
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 Whitespace
@@ -127,7 +127,7 @@ PlainText
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Punctuation

@@ -34,12 +34,12 @@ VariableName
 Whitespace
 Punctuation
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Numeric
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 Keyword
 Whitespace

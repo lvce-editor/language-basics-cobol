@@ -8,7 +8,7 @@ NewLine
 Numeric
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace
@@ -22,9 +22,9 @@ NewLine
 Numeric
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
-Keyword
+Function
 Whitespace
 KeywordOperator
 Whitespace

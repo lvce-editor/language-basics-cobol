@@ -17,7 +17,7 @@ PlainText
 PlainText
 PlainText
 PlainText
-VariableName
+Function
 Punctuation
 Whitespace
 VariableName
@@ -62,7 +62,7 @@ Keyword
 Whitespace
 Keyword
 Whitespace
-Keyword
+Function
 Punctuation
 NewLine
 Whitespace
@@ -75,7 +75,7 @@ PlainText
 PlainText
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -100,7 +100,7 @@ Keyword
 Whitespace
 Keyword
 Whitespace
-Keyword
+Function
 Punctuation
 NewLine
 Whitespace
@@ -127,7 +127,7 @@ KeywordOperator
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 NewLine

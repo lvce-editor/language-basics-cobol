@@ -43,7 +43,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -57,7 +57,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -71,7 +71,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -85,7 +85,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -102,7 +102,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Punctuation
@@ -116,7 +116,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -127,7 +127,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -138,7 +138,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -149,7 +149,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -160,7 +160,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -171,7 +171,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -182,7 +182,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -212,7 +212,7 @@ Punctuation
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 Whitespace
@@ -252,7 +252,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 NewLine
 Whitespace
 Whitespace
@@ -268,7 +268,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 NewLine
@@ -303,7 +303,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 Whitespace
@@ -365,7 +365,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 Whitespace

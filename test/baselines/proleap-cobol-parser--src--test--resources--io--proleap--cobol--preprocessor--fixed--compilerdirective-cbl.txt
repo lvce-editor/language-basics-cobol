@@ -1,6 +1,6 @@
 Numeric
 PlainText
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -11,7 +11,7 @@ VariableName
 Whitespace
 VariableName
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -20,14 +20,14 @@ Whitespace
 Keyword
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
 Keyword
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -35,4 +35,4 @@ Whitespace
 VariableName
 Punctuation
 Whitespace
-Numeric
+Comment

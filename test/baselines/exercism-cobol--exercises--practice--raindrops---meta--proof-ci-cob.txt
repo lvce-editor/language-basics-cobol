@@ -33,7 +33,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Punctuation
@@ -47,7 +47,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -75,7 +75,7 @@ KeywordControl
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Punctuation
 VariableName
 Punctuation
@@ -116,7 +116,7 @@ KeywordControl
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Punctuation
 VariableName
 Punctuation
@@ -166,7 +166,7 @@ KeywordControl
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Punctuation
 VariableName
 Punctuation
@@ -218,7 +218,7 @@ VariableName
 Whitespace
 KeywordOperator
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Whitespace
 Whitespace

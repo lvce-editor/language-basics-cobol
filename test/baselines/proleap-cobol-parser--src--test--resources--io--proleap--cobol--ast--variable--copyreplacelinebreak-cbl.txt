@@ -46,15 +46,7 @@ Whitespace
 VariableName
 Punctuation
 Punctuation
-Whitespace
-KeywordOperator
-Whitespace
-Punctuation
-Punctuation
-Function
-Punctuation
-Punctuation
-Punctuation
+Comment
 NewLine
 Numeric
 Whitespace

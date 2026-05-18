@@ -70,7 +70,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -84,7 +84,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -112,7 +112,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -126,7 +126,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -148,7 +148,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -162,7 +162,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -186,7 +186,7 @@ Punctuation
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 Whitespace
@@ -211,7 +211,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Whitespace
 Whitespace
@@ -249,7 +249,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Whitespace
 Whitespace
@@ -287,7 +287,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Whitespace
 Whitespace
@@ -298,17 +298,6 @@ PunctuationString
 String
 PunctuationString
 NewLine
-NewLine
-Whitespace
-Whitespace
-Whitespace
-Function
-Whitespace
-VariableName
-Whitespace
-KeywordOperator
-Whitespace
-VariableName
 NewLine
 Whitespace
 Whitespace
@@ -343,6 +332,17 @@ KeywordOperator
 Whitespace
 VariableName
 NewLine
+Whitespace
+Whitespace
+Whitespace
+Function
+Whitespace
+VariableName
+Whitespace
+KeywordOperator
+Whitespace
+VariableName
+NewLine
 NewLine
 NewLine
 Whitespace
@@ -386,7 +386,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Whitespace
 Whitespace
@@ -424,7 +424,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Whitespace
 Whitespace
@@ -462,7 +462,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 NewLine
 Whitespace
 Whitespace

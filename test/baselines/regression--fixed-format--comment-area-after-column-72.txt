@@ -1,0 +1,8 @@
+Whitespace
+Whitespace
+Keyword
+Whitespace
+Keyword
+Punctuation
+Whitespace
+Comment

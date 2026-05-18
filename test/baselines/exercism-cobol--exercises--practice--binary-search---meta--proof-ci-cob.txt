@@ -48,7 +48,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Punctuation
@@ -59,7 +59,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Punctuation
@@ -70,7 +70,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -79,7 +79,7 @@ Punctuation
 Whitespace
 KeywordOperator
 Whitespace
-LanguageConstant
+Keyword
 Punctuation
 NewLine
 Whitespace
@@ -88,7 +88,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -102,7 +102,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Whitespace
@@ -117,7 +117,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Punctuation
@@ -128,7 +128,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Punctuation
@@ -139,7 +139,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -153,13 +153,13 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Whitespace
 KeywordOperator
 Whitespace
-LanguageConstant
+Keyword
 Punctuation
 NewLine
 Whitespace
@@ -168,7 +168,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Punctuation
@@ -179,22 +179,22 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace
 KeywordOperator
 Whitespace
-LanguageConstant
-Punctuation
-NewLine
-Whitespace
-Whitespace
-Numeric
-Whitespace
-VariableName
-Whitespace
 Keyword
+Punctuation
+NewLine
+Whitespace
+Whitespace
+Numeric
+Whitespace
+VariableName
+Whitespace
+Function
 Whitespace
 Numeric
 Punctuation
@@ -205,7 +205,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Punctuation
@@ -227,7 +227,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Whitespace
@@ -262,7 +262,7 @@ NewLine
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 Whitespace
@@ -290,7 +290,7 @@ KeywordOperator
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Punctuation
 VariableName
 Punctuation
@@ -345,7 +345,7 @@ Punctuation
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Punctuation
 VariableName
 Punctuation
@@ -360,7 +360,7 @@ NewLine
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 Whitespace
@@ -374,7 +374,7 @@ Punctuation
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Punctuation
 VariableName
 Whitespace
@@ -482,7 +482,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 Whitespace
@@ -502,7 +502,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 Whitespace
@@ -554,7 +554,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -634,7 +634,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -765,7 +765,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 Whitespace
 NewLine
@@ -774,7 +774,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -786,7 +786,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Whitespace
 KeywordOperator
 Whitespace
@@ -798,7 +798,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 Whitespace
@@ -817,7 +817,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-VariableName
+Function
 Whitespace
 NewLine
 Whitespace
@@ -954,7 +954,7 @@ Punctuation
 Whitespace
 Keyword
 Whitespace
-VariableName
+Function
 Punctuation
 VariableName
 Whitespace

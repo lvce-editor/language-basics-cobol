@@ -23,15 +23,15 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
-Keyword
+Function
 Whitespace
 NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -40,7 +40,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Punctuation
 NewLine
 Whitespace

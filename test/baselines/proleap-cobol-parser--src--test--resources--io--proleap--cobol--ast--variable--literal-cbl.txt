@@ -53,7 +53,7 @@ Whitespace
 Whitespace
 Function
 Whitespace
-LanguageConstant
+Keyword
 Punctuation
 NewLine
 Numeric

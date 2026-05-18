@@ -4,7 +4,7 @@ NewLine
 Numeric
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation

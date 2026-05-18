@@ -59,7 +59,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -67,6 +67,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -75,7 +76,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -83,6 +84,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -91,7 +93,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -99,6 +101,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -107,7 +110,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -115,6 +118,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -123,7 +127,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Punctuation
@@ -131,6 +135,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -139,7 +144,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Keyword
+Function
 Whitespace
 Numeric
 Punctuation
@@ -148,4 +153,5 @@ Punctuation
 Numeric
 Punctuation
 Whitespace
+Comment
 NewLine

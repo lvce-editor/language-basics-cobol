@@ -30,7 +30,7 @@ PlainText
 PlainText
 PlainText
 PlainText
-VariableName
+Function
 Punctuation
 Whitespace
 NewLine

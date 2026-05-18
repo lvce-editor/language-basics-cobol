@@ -5,14 +5,14 @@ Whitespace
 Keyword
 Punctuation
 Whitespace
-VariableName
+Comment
 NewLine
 Numeric
 Whitespace
 Keyword
 Punctuation
 Whitespace
-VariableName
+Comment
 NewLine
 Numeric
 Whitespace
@@ -20,14 +20,14 @@ Whitespace
 VariableName
 Punctuation
 Whitespace
-VariableName
+Comment
 NewLine
 Numeric
 Whitespace
 Keyword
 Punctuation
 Whitespace
-VariableName
+Comment
 NewLine
 Numeric
 Whitespace
@@ -39,7 +39,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
-VariableName
+Comment
 NewLine
 Numeric
 Whitespace
@@ -48,7 +48,7 @@ Whitespace
 Keyword
 Punctuation
 Whitespace
-VariableName
+Comment
 NewLine
 Numeric
 Whitespace
@@ -60,7 +60,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
-VariableName
+Comment
 NewLine
 Numeric
 Whitespace
@@ -70,4 +70,4 @@ Whitespace
 KeywordControl
 Punctuation
 Whitespace
-VariableName
+Comment
