@@ -100,14 +100,14 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 LanguageConstant
 NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 PunctuationString
 String
@@ -118,7 +118,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace
@@ -129,7 +129,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 PunctuationString
 String
@@ -185,7 +185,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 PunctuationString
 String
@@ -200,7 +200,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 LanguageConstant
 NewLine

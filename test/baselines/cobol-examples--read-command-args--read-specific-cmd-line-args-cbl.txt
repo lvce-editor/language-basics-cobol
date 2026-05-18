@@ -92,7 +92,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace
@@ -107,7 +107,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-KeywordControl
+Function
 Whitespace
 KeywordControl
 Whitespace
@@ -140,7 +140,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace
@@ -156,7 +156,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 Whitespace
@@ -168,7 +168,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 NewLine

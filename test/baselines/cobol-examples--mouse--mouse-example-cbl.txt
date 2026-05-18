@@ -458,7 +458,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 PunctuationString
 String
@@ -471,7 +471,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 Whitespace
@@ -522,7 +522,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-KeywordControl
+Function
 Whitespace
 KeywordControl
 Whitespace
@@ -532,7 +532,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 Whitespace
@@ -564,7 +564,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Whitespace
 VariableName
 NewLine
@@ -826,7 +826,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 Whitespace
