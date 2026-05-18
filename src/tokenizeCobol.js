@@ -63,18 +63,12 @@ const RE_DOUBLE_QUOTE_CONTENT = /^[^"]+/
 const RE_SINGLE_QUOTE_CONTENT = /^[^']+/
 const RE_END_PROGRAM = /^end +program\b/i
 const RE_FUNCTION_CALL = /^(function)( +)([A-Za-z][A-Za-z0-9_-]*)/i
-const RE_WORD_OR_LABEL = /^(?:[A-Za-z][A-Za-z0-9_-]*|\d[A-Za-z0-9_-]*)/
 const RE_PERFORM_TARGET = /^(perform)( +)([A-Za-z0-9][A-Za-z0-9_-]*)\b/i
 const RE_THRU_TARGET = /^(thru|through)( +)([A-Za-z0-9][A-Za-z0-9_-]*)\b/i
 const RE_ACCESS_MODE = /^(access)( +)(mode)\b/i
 const RE_FILE_STATUS = /^(file)( +)(status)\b/i
 
-const languageConstants = new Set([
-  'FALSE',
-  'NULL',
-  'NULLS',
-  'TRUE',
-])
+const languageConstants = new Set(['FALSE', 'NULL', 'NULLS', 'TRUE'])
 
 const figurativeConstants = new Set([
   'HIGH-VALUE',
