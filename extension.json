@@ -1,0 +1,13 @@
+{
+  "id": "builtin.language-basics-cobol",
+  "name": "Language Basics COBOL",
+  "description": "Provides syntax highlighting and bracket matching in COBOL files.",
+  "languages": [
+    {
+      "id": "cobol",
+      "extensions": [".cbl", ".cob", ".cobol", ".cpy"],
+      "tokenize": "src/tokenizeCobol.js"
+    }
+  ],
+  "repository": "https://github.com/lvce-editor/language-basics-cobol"
+}
