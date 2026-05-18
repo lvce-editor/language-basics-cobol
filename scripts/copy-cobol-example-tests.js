@@ -1,7 +1,14 @@
 // @ts-nocheck
 
 import { execFile } from 'node:child_process'
-import { mkdtemp, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
+import {
+  mkdtemp,
+  mkdir,
+  readdir,
+  readFile,
+  rm,
+  writeFile,
+} from 'node:fs/promises'
 import path, { dirname, extname, relative } from 'node:path'
 import { tmpdir } from 'node:os'
 import { promisify } from 'node:util'
@@ -82,7 +89,9 @@ const main = async () => {
     })
     const allFiles = await getAllCobolFiles(repoPath)
     await writeTestFiles(allFiles, repoPath)
-    console.log(`Copied ${allFiles.length} COBOL example files into test/cases.`)
+    console.log(
+      `Copied ${allFiles.length} COBOL example files into test/cases.`,
+    )
   } finally {
     await rm(tempRoot, { recursive: true, force: true })
   }

@@ -5,12 +5,7 @@
   "languages": [
     {
       "id": "cobol",
-      "extensions": [
-        ".cbl",
-        ".cob",
-        ".cobol",
-        ".cpy"
-      ],
+      "extensions": [".cbl", ".cob", ".cobol", ".cpy"],
       "tokenize": "src/tokenizeCobol.js"
     }
   ],
