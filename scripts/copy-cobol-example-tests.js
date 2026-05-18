@@ -1,64 +1,94 @@
-import { execaCommand } from 'execa'
-import path, { dirname } from 'node:path'
+// @ts-nocheck
+
+import { execFile } from 'node:child_process'
+import { mkdtemp, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
+import path, { dirname, extname, relative } from 'node:path'
+import { tmpdir } from 'node:os'
+import { promisify } from 'node:util'
 import { fileURLToPath } from 'node:url'
-import { cp, readdir, readFile, rm, writeFile } from 'node:fs/promises'
+
+const execFileAsync = promisify(execFile)
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 
-const REPO = 'https://github.com/stleary/JSON-java'
-const COMMIT = '054786e300d0fc38f0cf7fc0f2db4d9b39cb6443'
+const repoUrl = 'https://github.com/shamrice/COBOL-Examples'
+const supportedExtensions = new Set(['.cbl', '.cob', '.cobol', '.cpy'])
+const testCasesPath = path.join(root, 'test', 'cases')
+const baselinesPath = path.join(root, 'test', 'baselines')
 
-const getTestName = (line) => {
-  return (
-    'json-java-' +
-    line.toLowerCase().trim().replaceAll(' ', '-').replaceAll('/', '-')
-  )
+const isCobolFile = (filePath) => {
+  return supportedExtensions.has(extname(filePath).toLowerCase())
 }
 
-const getAllTests = async (folder) => {
-  const dirents = await readdir(folder, { recursive: true })
-  const allTests = []
+const sanitizeSegment = (value) => {
+  return value.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')
+}
+
+const getTestName = (filePath, repoRoot) => {
+  const relativePath = relative(repoRoot, filePath)
+  const parts = relativePath.split(path.sep).filter(Boolean)
+  const normalized = parts.map(sanitizeSegment).filter(Boolean).join('--')
+  return `cobol-examples--${normalized}`
+}
+
+const getAllCobolFiles = async (folder) => {
+  const dirents = await readdir(folder, { withFileTypes: true })
+  const allFiles = []
   for (const dirent of dirents) {
-    if (!dirent.endsWith('.json')) {
+    const filePath = path.join(folder, dirent.name)
+    if (dirent.isDirectory()) {
+      const nestedFiles = await getAllCobolFiles(filePath)
+      allFiles.push(...nestedFiles)
       continue
     }
-    const filePath = `${folder}/${dirent}`
-    const testName = getTestName(dirent)
-    const fileContent = await readFile(filePath, 'utf8')
-    allTests.push({
-      testName,
-      testContent: fileContent,
-    })
+    if (dirent.isFile() && isCobolFile(filePath)) {
+      allFiles.push(filePath)
+    }
   }
-  return allTests
+  return allFiles.sort((left, right) => left.localeCompare(right))
 }
 
-const writeTestFiles = async (allTests) => {
-  for (const test of allTests) {
-    await writeFile(
-      `${root}/test/cases/${test.testName}.json`,
-      test.testContent,
-    )
+const resetTestDirectories = async () => {
+  await rm(testCasesPath, { recursive: true, force: true })
+  await rm(baselinesPath, { recursive: true, force: true })
+  await mkdir(testCasesPath, { recursive: true })
+  await mkdir(baselinesPath, { recursive: true })
+}
+
+const writeTestFiles = async (allFiles, repoRoot) => {
+  const seenNames = new Set()
+  for (const filePath of allFiles) {
+    const baseName = getTestName(filePath, repoRoot)
+    let testName = baseName
+    let suffix = 1
+    while (seenNames.has(testName)) {
+      suffix += 1
+      testName = `${baseName}-${suffix}`
+    }
+    seenNames.add(testName)
+    const content = await readFile(filePath, 'utf8')
+    await writeFile(path.join(testCasesPath, `${testName}.cbl`), content)
   }
 }
 
 const main = async () => {
-  process.chdir(root)
-  await rm(`${root}/.tmp`, { recursive: true, force: true })
-  await execaCommand(`git clone ${REPO} .tmp/json-java`)
-  process.chdir(`${root}/.tmp/json-java`)
-  await execaCommand(`git checkout ${COMMIT}`)
-  process.chdir(root)
-  await cp(
-    `${root}/.tmp/json-java/src/test/resources`,
-    `${root}/.tmp/json-java-tests`,
-    {
-      recursive: true,
-    },
-  )
-  const allTests = await getAllTests(`${root}/.tmp/json-java-tests`)
-  await writeTestFiles(allTests)
+  const tempRoot = await mkdtemp(path.join(tmpdir(), 'language-basics-cobol-'))
+  const repoPath = path.join(tempRoot, 'COBOL-Examples')
+  try {
+    await resetTestDirectories()
+    await execFileAsync('git', ['clone', '--depth', '1', repoUrl, repoPath], {
+      cwd: tempRoot,
+    })
+    const allFiles = await getAllCobolFiles(repoPath)
+    await writeTestFiles(allFiles, repoPath)
+    console.log(`Copied ${allFiles.length} COBOL example files into test/cases.`)
+  } finally {
+    await rm(tempRoot, { recursive: true, force: true })
+  }
 }
 
-main()
+main().catch((error) => {
+  console.error(error)
+  process.exitCode = 1
+})

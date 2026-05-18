@@ -1,10 +1,11 @@
-# Language Basics C
+# Language Basics COBOL
 
 ## Contributing
 
 ```sh
-git clone git@github.com:lvce-editor/language-basics-c.git &&
-cd language-basics-c &&
+git clone git@github.com:lvce-editor/language-basics-cobol.git &&
+cd language-basics-cobol &&
 npm ci &&
+npm run update-test-cases &&
 npm test
 ```

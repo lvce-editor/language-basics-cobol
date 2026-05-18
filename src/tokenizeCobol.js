@@ -3,17 +3,14 @@
  */
 export const State = {
   TopLevelContent: 1,
-  AfterInclude: 2,
-  InsideLineComment: 3,
-  InsideDoubleQuoteString: 4,
-  InsideBlockComment: 5,
+  InsideDoubleQuoteString: 2,
+  InsideSingleQuoteString: 3,
 }
 
 export const StateMap = {
   [State.TopLevelContent]: 'TopLevelContent',
-  [State.AfterInclude]: 'AfterInclude',
-  [State.InsideLineComment]: 'InsideLineComment',
   [State.InsideDoubleQuoteString]: 'InsideDoubleQuoteString',
+  [State.InsideSingleQuoteString]: 'InsideSingleQuoteString',
 }
 
 /**
@@ -22,93 +19,235 @@ export const StateMap = {
 export const TokenType = {
   Whitespace: 2,
   Punctuation: 3,
-  CurlyOpen: 6,
-  CurlyClose: 7,
-  PropertyColon: 8,
   VariableName: 10,
+  LanguageConstant: 13,
   None: 57,
-  Unknown: 881,
+  KeywordControl: 881,
   Numeric: 883,
-  NewLine: 884,
-  Include: 885,
-  Import: 886,
   Keyword: 887,
   Comment: 888,
   PunctuationString: 889,
   String: 890,
   PlainText: 891,
-  KeywordImport: 215,
-  KeywordControl: 881,
-  KeywordModifier: 882,
-  KeywordReturn: 883,
-  KeywordNew: 884,
-  FunctionName: 885,
-  KeywordThis: 886,
   KeywordOperator: 8887,
-  KeywordFunction: 8889,
-  Class: 8890,
-  KeywordVoid: 8891,
-  LanguageConstant: 13,
 }
 
 export const TokenMap = {
   [TokenType.Whitespace]: 'Whitespace',
   [TokenType.Punctuation]: 'Punctuation',
-  [TokenType.CurlyOpen]: 'Punctuation',
-  [TokenType.PropertyColon]: 'Punctuation',
   [TokenType.VariableName]: 'VariableName',
+  [TokenType.LanguageConstant]: 'LanguageConstant',
   [TokenType.None]: 'None',
-  [TokenType.Unknown]: 'Unknown',
+  [TokenType.KeywordControl]: 'KeywordControl',
   [TokenType.Numeric]: 'Numeric',
-  [TokenType.NewLine]: 'NewLine',
-  [TokenType.Include]: 'Include',
-  [TokenType.Import]: 'Import',
   [TokenType.Keyword]: 'Keyword',
   [TokenType.Comment]: 'Comment',
   [TokenType.PunctuationString]: 'PunctuationString',
   [TokenType.String]: 'String',
   [TokenType.PlainText]: 'PlainText',
-  [TokenType.KeywordImport]: 'KeywordImport',
-  [TokenType.KeywordControl]: 'KeywordControl',
-  [TokenType.KeywordModifier]: 'KeywordModifier',
-  [TokenType.KeywordReturn]: 'KeywordReturn',
-  [TokenType.KeywordNew]: 'KeywordNew',
-  [TokenType.FunctionName]: 'Function',
-  [TokenType.KeywordThis]: 'KeywordThis',
   [TokenType.KeywordOperator]: 'KeywordOperator',
-  [TokenType.KeywordFunction]: 'KeywordFunction',
-  [TokenType.KeywordVoid]: 'KeywordVoid',
-  [TokenType.Class]: 'Class',
-  [TokenType.LanguageConstant]: 'LanguageConstant',
 }
 
-const RE_SELECTOR = /^[\.a-zA-Z\d\-\:>]+/
 const RE_WHITESPACE = /^ +/
-const RE_CURLY_OPEN = /^\{/
-const RE_CURLY_CLOSE = /^\}/
-const RE_PROPERTY_NAME = /^[a-zA-Z\-]+\b/
-const RE_COLON = /^:/
-const RE_PROPERTY_VALUE = /^[^;]+/
-const RE_SEMICOLON = /^;/
-const RE_COMMA = /^,/
-const RE_ANYTHING = /^.+/s
-const RE_NUMERIC = /^(([0-9]+\.?[0-9]*)|(\.[0-9]+))/
-const RE_ANYTHING_UNTIL_CLOSE_BRACE = /^[^\}]+/
-const RE_INCLUDE = /^#include\b/
-const RE_IMPORT = /^<[^>]*>/
-const RE_KEYWORD =
-  /^(?:while|volatile|void|unsigned|union|typedef|switch|struct|static|sizeof|signed|short|return|register|long|int|if|goto|for|float|extern|enum|else|double|do|default|continue|const|char|case|break|auto)\b/
-
-const RE_LINE_COMMENT_START = /^\/\//
-const RE_ANYTHING_UNTIL_END = /^.+/s
-const RE_VARIABLE_NAME = /^[a-zA-Z][a-zA-Z\d\_]*/
-const RE_PUNCTUATION = /^[\(\)=\+\-><\.:\/\{\};,\[\]\*]/
+const RE_NUMERIC = /^[+-]?(?:\d+(?:\.\d+)?|\.\d+)/
+const RE_WORD = /^[A-Za-z][A-Za-z0-9_-]*/
+const RE_PUNCTUATION = /^(?:>=|<=|<>|[(),.;=+\-/*<>:&])/
+const RE_INLINE_COMMENT = /^\*>/
 const RE_DOUBLE_QUOTE = /^"/
-const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"]+/
-const RE_BLOCK_COMMENT_START = /^\/\*/
-const RE_BLOCK_COMMENT_CONTENT = /^.+?(?=\*\/)/
-const RE_BLOCK_COMMENT_END = /^\*\//
-const RE_SLASH = /^\//
+const RE_SINGLE_QUOTE = /^'/
+const RE_DOUBLE_QUOTE_ESCAPE = /^""/
+const RE_SINGLE_QUOTE_ESCAPE = /^''/
+const RE_DOUBLE_QUOTE_CONTENT = /^[^"]+/
+const RE_SINGLE_QUOTE_CONTENT = /^[^']+/
+
+const languageConstants = new Set([
+  'FALSE',
+  'HIGH-VALUE',
+  'HIGH-VALUES',
+  'LOW-VALUE',
+  'LOW-VALUES',
+  'NULL',
+  'NULLS',
+  'QUOTE',
+  'QUOTES',
+  'SPACE',
+  'SPACES',
+  'TRUE',
+  'ZERO',
+  'ZEROES',
+  'ZEROS',
+])
+
+const keywordControls = new Set([
+  'AT',
+  'ELSE',
+  'END',
+  'END-CALL',
+  'END-DISPLAY',
+  'END-EVALUATE',
+  'END-IF',
+  'END-PERFORM',
+  'END-READ',
+  'END-SEARCH',
+  'END-START',
+  'END-STRING',
+  'END-UNSTRING',
+  'END-WRITE',
+  'EVALUATE',
+  'EXIT',
+  'FOREVER',
+  'GO',
+  'GOBACK',
+  'IF',
+  'INVALID',
+  'NEXT',
+  'NOT',
+  'ON',
+  'OTHER',
+  'PARAGRAPH',
+  'PERFORM',
+  'READ',
+  'RETURN',
+  'RUN',
+  'SEARCH',
+  'SIZE',
+  'START',
+  'STOP',
+  'THEN',
+  'UNTIL',
+  'VARYING',
+  'WHEN',
+])
+
+const keywordOperators = new Set([
+  'AND',
+  'BY',
+  'CONTENT',
+  'DESCENDING',
+  'EQUAL',
+  'FROM',
+  'GREATER',
+  'IN',
+  'INTO',
+  'IS',
+  'LESS',
+  'OF',
+  'OR',
+  'REFERENCE',
+  'THROUGH',
+  'THRU',
+  'TO',
+  'USING',
+  'VALUE',
+])
+
+const keywords = new Set([
+  'ACCEPT',
+  'ADD',
+  'ADDRESS',
+  'ADVANCING',
+  'AFTER',
+  'ALL',
+  'ALPHABETIC',
+  'ALPHANUMERIC',
+  'ASCENDING',
+  'ASSIGN',
+  'AUTHOR',
+  'BACKGROUND-COLOR',
+  'BELL',
+  'BLANK',
+  'CALL',
+  'CANCEL',
+  'CLOSE',
+  'COLUMN',
+  'COMP',
+  'COMP-3',
+  'COMP-5',
+  'COMPUTE',
+  'CONFIGURATION',
+  'CONNECT',
+  'COUNT',
+  'CURSOR',
+  'DATA',
+  'DATE',
+  'DECLARE',
+  'DELETE',
+  'DEPENDING',
+  'DISPLAY',
+  'DIVISION',
+  'END-EXEC',
+  'END-JSON',
+  'ENVIRONMENT',
+  'ERASE',
+  'ERROR',
+  'EVERY',
+  'EXCEPTION',
+  'EXEC',
+  'EXTEND',
+  'FD',
+  'FETCH',
+  'FILE',
+  'FILE-CONTROL',
+  'FIRST',
+  'FOREGROUND-COLOR',
+  'FUNCTION',
+  'GENERATE',
+  'GIVING',
+  'IDENTIFICATION',
+  'INDEXED',
+  'INITIALIZE',
+  'INPUT',
+  'INPUT-OUTPUT',
+  'JSON',
+  'KEY',
+  'LIKE',
+  'LINE',
+  'LINKAGE',
+  'LOCAL-STORAGE',
+  'MERGE',
+  'MODE',
+  'MOVE',
+  'NAME',
+  'NO',
+  'OCCURS',
+  'OPEN',
+  'ORGANIZATION',
+  'OUTPUT',
+  'PIC',
+  'PICTURE',
+  'POINTER',
+  'PROCEDURE',
+  'PROGRAM-ID',
+  'RECORDING',
+  'REDEFINES',
+  'REPLACE',
+  'REPLACING',
+  'RESET',
+  'RETURNING',
+  'REWRITE',
+  'SD',
+  'SECTION',
+  'SELECT',
+  'SEQUENTIAL',
+  'SET',
+  'SORT',
+  'SQL',
+  'STATUS',
+  'STRING',
+  'SUBTRACT',
+  'THAN',
+  'TIMES',
+  'TRIM',
+  'UNSTRING',
+  'UPON',
+  'VALUE',
+  'VALUES',
+  'WHENEVER',
+  'WITH',
+  'WORKING-STORAGE',
+  'WRITE',
+  'XML',
+])
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -121,154 +260,228 @@ export const isEqualLineState = (lineStateA, lineStateB) => {
   return lineStateA.state === lineStateB.state
 }
 
-/**
- * @param {string} line
- */
-export const tokenizeLine = (line, lineState) => {
-  let next = null
+const classifyWord = (value) => {
+  const upper = value.toUpperCase()
+  if (languageConstants.has(upper)) {
+    return TokenType.LanguageConstant
+  }
+  if (keywordControls.has(upper)) {
+    return TokenType.KeywordControl
+  }
+  if (keywordOperators.has(upper)) {
+    return TokenType.KeywordOperator
+  }
+  if (keywords.has(upper)) {
+    return TokenType.Keyword
+  }
+  return TokenType.VariableName
+}
+
+const pushToken = (tokens, token, length) => {
+  if (length > 0) {
+    tokens.push(token, length)
+  }
+}
+
+const tokenizeSequenceArea = (prefix, tokens) => {
   let index = 0
-  let tokens = []
-  let token = TokenType.None
+  while (index < prefix.length) {
+    const part = prefix.slice(index)
+    const whitespaceMatch = part.match(RE_WHITESPACE)
+    if (whitespaceMatch) {
+      pushToken(tokens, TokenType.Whitespace, whitespaceMatch[0].length)
+      index += whitespaceMatch[0].length
+      continue
+    }
+    const numericMatch = part.match(RE_NUMERIC)
+    if (numericMatch) {
+      pushToken(tokens, TokenType.Numeric, numericMatch[0].length)
+      index += numericMatch[0].length
+      continue
+    }
+    pushToken(tokens, TokenType.PlainText, 1)
+    index += 1
+  }
+}
+
+const tokenizeTopLevel = (part, tokens) => {
+  if (part.match(RE_INLINE_COMMENT)) {
+    pushToken(tokens, TokenType.Comment, part.length)
+    return {
+      consumed: part.length,
+      state: State.TopLevelContent,
+    }
+  }
+  const whitespaceMatch = part.match(RE_WHITESPACE)
+  if (whitespaceMatch) {
+    pushToken(tokens, TokenType.Whitespace, whitespaceMatch[0].length)
+    return {
+      consumed: whitespaceMatch[0].length,
+      state: State.TopLevelContent,
+    }
+  }
+  const doubleQuoteMatch = part.match(RE_DOUBLE_QUOTE)
+  if (doubleQuoteMatch) {
+    pushToken(tokens, TokenType.PunctuationString, 1)
+    return {
+      consumed: 1,
+      state: State.InsideDoubleQuoteString,
+    }
+  }
+  const singleQuoteMatch = part.match(RE_SINGLE_QUOTE)
+  if (singleQuoteMatch) {
+    pushToken(tokens, TokenType.PunctuationString, 1)
+    return {
+      consumed: 1,
+      state: State.InsideSingleQuoteString,
+    }
+  }
+  const wordMatch = part.match(RE_WORD)
+  if (wordMatch) {
+    pushToken(tokens, classifyWord(wordMatch[0]), wordMatch[0].length)
+    return {
+      consumed: wordMatch[0].length,
+      state: State.TopLevelContent,
+    }
+  }
+  const numericMatch = part.match(RE_NUMERIC)
+  if (numericMatch) {
+    pushToken(tokens, TokenType.Numeric, numericMatch[0].length)
+    return {
+      consumed: numericMatch[0].length,
+      state: State.TopLevelContent,
+    }
+  }
+  const punctuationMatch = part.match(RE_PUNCTUATION)
+  if (punctuationMatch) {
+    pushToken(tokens, TokenType.Punctuation, punctuationMatch[0].length)
+    return {
+      consumed: punctuationMatch[0].length,
+      state: State.TopLevelContent,
+    }
+  }
+  pushToken(tokens, TokenType.PlainText, 1)
+  return {
+    consumed: 1,
+    state: State.TopLevelContent,
+  }
+}
+
+const tokenizeInsideDoubleQuoteString = (part, tokens) => {
+  const escapedQuoteMatch = part.match(RE_DOUBLE_QUOTE_ESCAPE)
+  if (escapedQuoteMatch) {
+    pushToken(tokens, TokenType.String, 2)
+    return {
+      consumed: 2,
+      state: State.InsideDoubleQuoteString,
+    }
+  }
+  const closingQuoteMatch = part.match(RE_DOUBLE_QUOTE)
+  if (closingQuoteMatch) {
+    pushToken(tokens, TokenType.PunctuationString, 1)
+    return {
+      consumed: 1,
+      state: State.TopLevelContent,
+    }
+  }
+  const stringContentMatch = part.match(RE_DOUBLE_QUOTE_CONTENT)
+  if (stringContentMatch) {
+    pushToken(tokens, TokenType.String, stringContentMatch[0].length)
+    return {
+      consumed: stringContentMatch[0].length,
+      state: State.InsideDoubleQuoteString,
+    }
+  }
+  pushToken(tokens, TokenType.String, 1)
+  return {
+    consumed: 1,
+    state: State.InsideDoubleQuoteString,
+  }
+}
+
+const tokenizeInsideSingleQuoteString = (part, tokens) => {
+  const escapedQuoteMatch = part.match(RE_SINGLE_QUOTE_ESCAPE)
+  if (escapedQuoteMatch) {
+    pushToken(tokens, TokenType.String, 2)
+    return {
+      consumed: 2,
+      state: State.InsideSingleQuoteString,
+    }
+  }
+  const closingQuoteMatch = part.match(RE_SINGLE_QUOTE)
+  if (closingQuoteMatch) {
+    pushToken(tokens, TokenType.PunctuationString, 1)
+    return {
+      consumed: 1,
+      state: State.TopLevelContent,
+    }
+  }
+  const stringContentMatch = part.match(RE_SINGLE_QUOTE_CONTENT)
+  if (stringContentMatch) {
+    pushToken(tokens, TokenType.String, stringContentMatch[0].length)
+    return {
+      consumed: stringContentMatch[0].length,
+      state: State.InsideSingleQuoteString,
+    }
+  }
+  pushToken(tokens, TokenType.String, 1)
+  return {
+    consumed: 1,
+    state: State.InsideSingleQuoteString,
+  }
+}
+
+export const tokenizeLine = (line, lineState) => {
+  let index = 0
   let state = lineState.state
+  const tokens = []
+
+  if (state === State.TopLevelContent && line.length >= 7) {
+    const prefix = line.slice(0, 6)
+    tokenizeSequenceArea(prefix, tokens)
+    const indicator = line[6]
+    if (
+      indicator === '*' ||
+      indicator === '/' ||
+      indicator === 'D' ||
+      indicator === 'd'
+    ) {
+      pushToken(tokens, TokenType.Comment, line.length - 6)
+      return {
+        state: State.TopLevelContent,
+        tokens,
+      }
+    }
+    if (indicator === ' ') {
+      pushToken(tokens, TokenType.Whitespace, 1)
+    } else if (indicator === '-') {
+      pushToken(tokens, TokenType.Punctuation, 1)
+    } else {
+      pushToken(tokens, TokenType.PlainText, 1)
+    }
+    index = 7
+  }
+
   while (index < line.length) {
     const part = line.slice(index)
+    let result
     switch (state) {
       case State.TopLevelContent:
-        if ((next = part.match(RE_KEYWORD))) {
-          switch (next[0]) {
-            case 'true':
-            case 'false':
-            case 'null':
-              token = TokenType.LanguageConstant
-              state = State.TopLevelContent
-              break
-            case 'as':
-            case 'switch':
-            case 'default':
-            case 'case':
-            case 'else':
-            case 'if':
-            case 'break':
-            case 'throw':
-            case 'for':
-            case 'try':
-            case 'catch':
-            case 'finally':
-            case 'continue':
-            case 'while':
-            case 'goto':
-              token = TokenType.KeywordControl
-              state = State.TopLevelContent
-              break
-            case 'return':
-              token = TokenType.KeywordReturn
-              state = State.TopLevelContent
-              break
-            case 'of':
-              token = TokenType.KeywordOperator
-              state = State.TopLevelContent
-              break
-            case 'void':
-              token = TokenType.KeywordVoid
-              state = State.TopLevelContent
-              break
-            default:
-              token = TokenType.Keyword
-              state = State.TopLevelContent
-              break
-          }
-        } else if ((next = part.match(RE_WHITESPACE))) {
-          token = TokenType.Whitespace
-          state = State.TopLevelContent
-        } else if ((next = part.match(RE_VARIABLE_NAME))) {
-          token = TokenType.VariableName
-          state = State.TopLevelContent
-        } else if ((next = part.match(RE_DOUBLE_QUOTE))) {
-          token = TokenType.PunctuationString
-          state = State.InsideDoubleQuoteString
-        } else if ((next = part.match(RE_INCLUDE))) {
-          token = TokenType.Include
-          state = State.AfterInclude
-        } else if ((next = part.match(RE_SLASH))) {
-          if ((next = part.match(RE_BLOCK_COMMENT_START))) {
-            token = TokenType.Comment
-            state = State.InsideBlockComment
-          } else if ((next = part.match(RE_LINE_COMMENT_START))) {
-            token = TokenType.Comment
-            state = State.InsideLineComment
-          } else {
-            next = part.match(RE_SLASH)
-            token = TokenType.Punctuation
-            state = State.TopLevelContent
-          }
-        } else if ((next = part.match(RE_PUNCTUATION))) {
-          token = TokenType.Punctuation
-          state = State.TopLevelContent
-        } else if ((next = part.match(RE_NUMERIC))) {
-          token = TokenType.Numeric
-          state = State.TopLevelContent
-        } else if ((next = part.match(RE_ANYTHING_UNTIL_END))) {
-          token = TokenType.PlainText
-          state = State.TopLevelContent
-        } else {
-          part //?
-          throw new Error('no')
-        }
-        break
-      case State.AfterInclude:
-        if ((next = part.match(RE_WHITESPACE))) {
-          token = TokenType.Whitespace
-          state = State.AfterInclude
-        } else if ((next = part.match(RE_DOUBLE_QUOTE))) {
-          token = TokenType.PunctuationString
-          state = State.InsideDoubleQuoteString
-        } else if ((next = part.match(RE_IMPORT))) {
-          token = TokenType.Import
-          state = State.TopLevelContent
-        } else {
-          throw new Error('no')
-        }
-        break
-      case State.InsideLineComment:
-        if ((next = part.match(RE_ANYTHING_UNTIL_END))) {
-          token = TokenType.Comment
-          state = State.TopLevelContent
-        } else {
-          throw new Error('no')
-        }
+        result = tokenizeTopLevel(part, tokens)
         break
       case State.InsideDoubleQuoteString:
-        if ((next = part.match(RE_STRING_DOUBLE_QUOTE_CONTENT))) {
-          token = TokenType.String
-          state = State.InsideDoubleQuoteString
-        } else if ((next = part.match(RE_DOUBLE_QUOTE))) {
-          token = TokenType.PunctuationString
-          state = State.TopLevelContent
-        } else {
-          throw new Error('no')
-        }
+        result = tokenizeInsideDoubleQuoteString(part, tokens)
         break
-      case State.InsideBlockComment:
-        if ((next = part.match(RE_BLOCK_COMMENT_END))) {
-          token = TokenType.Comment
-          state = State.TopLevelContent
-        } else if ((next = part.match(RE_BLOCK_COMMENT_CONTENT))) {
-          token = TokenType.Comment
-          state = State.InsideBlockComment
-        } else if ((next = part.match(RE_ANYTHING_UNTIL_END))) {
-          token = TokenType.Comment
-          state = State.InsideBlockComment
-        } else {
-          throw new Error('no')
-        }
+      case State.InsideSingleQuoteString:
+        result = tokenizeInsideSingleQuoteString(part, tokens)
         break
       default:
-        throw new Error('no')
+        throw new Error('unknown tokenizer state')
     }
-    const tokenLength = next[0].length
-    index += tokenLength
-    tokens.push(token, tokenLength)
+    index += result.consumed
+    state = result.state
   }
+
   return {
     state,
     tokens,

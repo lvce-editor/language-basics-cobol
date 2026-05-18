@@ -1,15 +1,18 @@
 {
-  "id": "builtin.language-basics-c",
-  "name": "Language Basics C",
-  "description": "Provides syntax highlighting and bracket matching in C files.",
+  "id": "builtin.language-basics-cobol",
+  "name": "Language Basics COBOL",
+  "description": "Provides syntax highlighting and bracket matching in COBOL files.",
   "languages": [
     {
-      "id": "c",
+      "id": "cobol",
       "extensions": [
-        ".c"
+        ".cbl",
+        ".cob",
+        ".cobol",
+        ".cpy"
       ],
-      "tokenize": "src/tokenizeC.js"
+      "tokenize": "src/tokenizeCobol.js"
     }
   ],
-  "repository": "https://github.com/lvce-editor/language-basics-c"
+  "repository": "https://github.com/lvce-editor/language-basics-cobol"
 }

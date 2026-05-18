@@ -1,5 +1,5 @@
 {
-  "name": "builtin.language-basics-c",
+  "name": "builtin.language-basics-cobol",
   "version": "0.0.0-dev",
   "license": "MIT",
   "author": "Lvce Editor",
@@ -7,8 +7,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "node ./node_modules/@lvce-editor/server/bin/server.js ./test/cases --only-extension=.",
+    "format": "prettier --write .",
     "lint": "eslint . && prettier --check .",
-    "test": "test-syntax-highlighting"
+    "test": "test-syntax-highlighting",
+    "type-check": "tsc -p tsconfig.json",
+    "update-test-cases": "node ./scripts/copy-cobol-example-tests.js"
   },
   "prettier": {
     "semi": false,
