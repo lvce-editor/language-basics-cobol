@@ -60,6 +60,7 @@ Whitespace
 VariableName
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -76,6 +77,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -92,6 +94,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -108,6 +111,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -124,6 +128,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -140,6 +145,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -156,6 +162,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -171,6 +178,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -186,6 +194,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -201,6 +210,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -216,6 +226,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -232,6 +243,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -247,6 +259,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -262,6 +275,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -277,6 +291,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -292,6 +307,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -307,6 +323,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -322,6 +339,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -338,6 +356,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -354,6 +373,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -370,6 +390,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -386,4 +407,5 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine

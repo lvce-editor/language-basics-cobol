@@ -44,12 +44,8 @@ KeywordOperator
 Whitespace
 KeywordControl
 Whitespace
-KeywordOperator
-Whitespace
 VariableName
-Whitespace
-KeywordControl
-Punctuation
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -71,4 +67,4 @@ Whitespace
 KeywordOperator
 Whitespace
 VariableName
-Punctuation
+Comment

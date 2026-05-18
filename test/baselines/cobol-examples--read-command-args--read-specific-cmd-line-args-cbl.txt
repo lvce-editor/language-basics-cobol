@@ -136,6 +136,7 @@ Whitespace
 Whitespace
 Whitespace
 Comment
+Comment
 NewLine
 Whitespace
 Whitespace
@@ -151,6 +152,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
+Comment
 Comment
 NewLine
 Whitespace

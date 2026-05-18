@@ -29,6 +29,7 @@ Whitespace
 Keyword
 Punctuation
 Whitespace
+Comment
 NewLine
 Numeric
 Whitespace
@@ -40,6 +41,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
+Comment
 NewLine
 Numeric
 Whitespace

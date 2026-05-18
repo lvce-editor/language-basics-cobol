@@ -31,5 +31,5 @@ VariableName
 Whitespace
 KeywordControl
 Whitespace
-Keyword
+Function
 Punctuation

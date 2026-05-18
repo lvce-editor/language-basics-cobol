@@ -62,6 +62,7 @@ const RE_SINGLE_QUOTE_ESCAPE = /^''/
 const RE_DOUBLE_QUOTE_CONTENT = /^[^"]+/
 const RE_SINGLE_QUOTE_CONTENT = /^[^']+/
 const RE_END_PROGRAM = /^end +program\b/i
+const RE_EXEC_SQL = /^(exec)( +)(sql)\b/i
 const RE_FUNCTION_CALL = /^(function)( +)([A-Za-z][A-Za-z0-9_-]*)/i
 const RE_PERFORM_TARGET = /^(perform)( +)([A-Za-z0-9][A-Za-z0-9_-]*)\b/i
 const RE_THRU_TARGET = /^(thru|through)( +)([A-Za-z0-9][A-Za-z0-9_-]*)\b/i
@@ -69,6 +70,7 @@ const RE_ACCESS_MODE = /^(access)( +)(mode)\b/i
 const RE_FILE_STATUS = /^(file)( +)(status)\b/i
 const RE_PARAGRAPH_LABEL =
   /^( +)?([A-Za-z0-9][A-Za-z0-9-]*-[A-Za-z0-9-]*)(\.)(?=\s|$)/i
+const FIXED_FORMAT_COMMENT_AREA_START = 72
 
 const languageConstants = new Set(['FALSE', 'NULL', 'NULLS', 'TRUE'])
 
@@ -153,6 +155,7 @@ const functionNames = new Set([
   'ACCEPT',
   'CLOSE',
   'DISPLAY',
+  'END-EXEC',
   'ENTRY',
   'MERGE',
   'MOVE',
@@ -200,7 +203,6 @@ const keywords = new Set([
   'DELETE',
   'DEPENDING',
   'DIVISION',
-  'END-EXEC',
   'END-JSON',
   'ENVIRONMENT',
   'ERASE',
@@ -430,6 +432,16 @@ const tokenizeTopLevel = (part, tokens) => {
       state: State.TopLevelContent,
     }
   }
+  const execSqlMatch = part.match(RE_EXEC_SQL)
+  if (execSqlMatch) {
+    pushToken(tokens, TokenType.FunctionName, execSqlMatch[1].length)
+    pushToken(tokens, TokenType.Whitespace, execSqlMatch[2].length)
+    pushToken(tokens, TokenType.FunctionName, execSqlMatch[3].length)
+    return {
+      consumed: execSqlMatch[0].length,
+      state: State.TopLevelContent,
+    }
+  }
   const wordMatch = part.match(RE_WORD)
   if (wordMatch) {
     pushToken(tokens, classifyWord(wordMatch[0]), wordMatch[0].length)
@@ -529,6 +541,7 @@ export const tokenizeLine = (line, lineState) => {
   let index = 0
   let state = lineState.state
   const tokens = []
+  const contentEnd = Math.min(line.length, FIXED_FORMAT_COMMENT_AREA_START)
 
   if (state === State.TopLevelContent && line.length >= 7) {
     const prefix = line.slice(0, 6)
@@ -557,7 +570,9 @@ export const tokenizeLine = (line, lineState) => {
   }
 
   if (state === State.TopLevelContent) {
-    const paragraphLabelMatch = line.slice(index).match(RE_PARAGRAPH_LABEL)
+    const paragraphLabelMatch = line
+      .slice(index, contentEnd)
+      .match(RE_PARAGRAPH_LABEL)
     if (paragraphLabelMatch && isCallableTarget(paragraphLabelMatch[2])) {
       if (paragraphLabelMatch[1]) {
         pushToken(tokens, TokenType.Whitespace, paragraphLabelMatch[1].length)
@@ -568,8 +583,8 @@ export const tokenizeLine = (line, lineState) => {
     }
   }
 
-  while (index < line.length) {
-    const part = line.slice(index)
+  while (index < contentEnd) {
+    const part = line.slice(index, contentEnd)
     let result
     switch (state) {
       case State.TopLevelContent:
@@ -586,6 +601,10 @@ export const tokenizeLine = (line, lineState) => {
     }
     index += result.consumed
     state = result.state
+  }
+
+  if (contentEnd < line.length) {
+    pushToken(tokens, TokenType.Comment, line.length - contentEnd)
   }
 
   return {

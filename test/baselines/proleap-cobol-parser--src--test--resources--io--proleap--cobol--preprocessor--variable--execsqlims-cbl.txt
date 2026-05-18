@@ -48,7 +48,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Punctuation
 NewLine
 Whitespace
@@ -73,7 +73,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Punctuation
 NewLine
 Whitespace
@@ -106,7 +106,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Punctuation
 NewLine
 Whitespace
@@ -175,5 +175,5 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Punctuation

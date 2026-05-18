@@ -319,6 +319,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Comment

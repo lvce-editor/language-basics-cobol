@@ -2017,7 +2017,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Punctuation
 NewLine
 NewLine
@@ -4855,7 +4855,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Punctuation
 NewLine
 NewLine
@@ -5072,7 +5072,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Punctuation
 NewLine
 NewLine
@@ -5172,7 +5172,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 Whitespace
@@ -5227,7 +5227,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 Whitespace
@@ -5295,7 +5295,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Punctuation
 NewLine
 NewLine
@@ -5370,7 +5370,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Punctuation
 NewLine
 NewLine

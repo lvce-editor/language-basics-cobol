@@ -667,6 +667,7 @@ Whitespace
 VariableName
 Punctuation
 Whitespace
+Comment
 NewLine
 Whitespace
 Whitespace

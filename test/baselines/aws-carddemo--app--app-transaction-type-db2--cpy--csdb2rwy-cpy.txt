@@ -66,7 +66,7 @@ Whitespace
 VariableName
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -83,7 +83,7 @@ Punctuation
 Numeric
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -101,7 +101,7 @@ Punctuation
 Whitespace
 Keyword
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -111,7 +111,7 @@ Whitespace
 Numeric
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -128,7 +128,7 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -144,7 +144,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -160,7 +160,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -176,7 +176,7 @@ Punctuation
 Numeric
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -186,9 +186,6 @@ Whitespace
 Keyword
 Punctuation
 Whitespace
-Numeric
-NewLine
-Numeric
 Comment
 NewLine
 Numeric
@@ -198,6 +195,9 @@ Numeric
 Comment
 NewLine
 Numeric
+Comment
+NewLine
+Numeric
 Whitespace
 Whitespace
 Numeric
@@ -205,7 +205,7 @@ Whitespace
 VariableName
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -230,7 +230,7 @@ Whitespace
 Numeric
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -240,7 +240,7 @@ Whitespace
 VariableName
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -249,7 +249,7 @@ Numeric
 Whitespace
 VariableName
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -261,7 +261,7 @@ Punctuation
 Numeric
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -272,7 +272,7 @@ Numeric
 Whitespace
 Keyword
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -282,12 +282,12 @@ Whitespace
 Keyword
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -312,7 +312,7 @@ Whitespace
 Numeric
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -322,7 +322,7 @@ Whitespace
 VariableName
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -345,7 +345,7 @@ String
 PunctuationString
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -388,5 +388,5 @@ Numeric
 Punctuation
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine

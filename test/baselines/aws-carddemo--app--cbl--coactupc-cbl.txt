@@ -9450,7 +9450,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 NewLine
 Whitespace
@@ -10041,7 +10041,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 Comment
@@ -10075,7 +10075,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 Comment
@@ -10475,7 +10475,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 Whitespace
@@ -10652,7 +10652,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 Comment
@@ -31300,7 +31300,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 Whitespace
@@ -31629,7 +31629,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 NewLine
 Whitespace
@@ -32012,7 +32012,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 NewLine
 Whitespace
@@ -32390,7 +32390,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 NewLine
 Whitespace
@@ -33468,7 +33468,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 Comment
@@ -33660,7 +33660,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 Comment
@@ -34543,7 +34543,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Punctuation
 NewLine
 Whitespace
@@ -34678,7 +34678,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 Punctuation
 NewLine
 Whitespace
@@ -34744,7 +34744,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 Whitespace
@@ -35696,7 +35696,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 NewLine
 Whitespace
@@ -35718,7 +35718,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 NewLine
 Whitespace
@@ -35743,7 +35743,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-Keyword
+Function
 NewLine
 Whitespace
 Whitespace

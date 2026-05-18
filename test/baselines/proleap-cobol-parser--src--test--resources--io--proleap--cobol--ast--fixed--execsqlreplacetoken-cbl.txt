@@ -5,7 +5,7 @@ Whitespace
 Keyword
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -15,7 +15,7 @@ Whitespace
 VariableName
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -24,7 +24,7 @@ Whitespace
 Keyword
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -33,15 +33,15 @@ Whitespace
 Keyword
 Punctuation
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
-Keyword
+Function
 Whitespace
-Keyword
+Function
 Whitespace
-Numeric
+Comment
 NewLine
 Numeric
 Whitespace
@@ -60,5 +60,7 @@ PunctuationString
 Punctuation
 PunctuationString
 String
+Comment
 NewLine
 String
+Comment
