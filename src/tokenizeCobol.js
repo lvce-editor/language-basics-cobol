@@ -61,6 +61,7 @@ const RE_DOUBLE_QUOTE_ESCAPE = /^""/
 const RE_SINGLE_QUOTE_ESCAPE = /^''/
 const RE_DOUBLE_QUOTE_CONTENT = /^[^"]+/
 const RE_SINGLE_QUOTE_CONTENT = /^[^']+/
+const RE_END_PROGRAM = /^end +program\b/i
 
 const languageConstants = new Set([
   'FALSE',
@@ -143,7 +144,7 @@ const keywordOperators = new Set([
   'VALUE',
 ])
 
-const functionNames = new Set(['ACCEPT', 'DISPLAY', 'PERFORM'])
+const functionNames = new Set(['ACCEPT', 'DISPLAY', 'MOVE', 'PERFORM', 'TRIM'])
 
 const keywords = new Set([
   'ADD',
@@ -208,7 +209,6 @@ const keywords = new Set([
   'LOCAL-STORAGE',
   'MERGE',
   'MODE',
-  'MOVE',
   'NAME',
   'NO',
   'OCCURS',
@@ -239,7 +239,6 @@ const keywords = new Set([
   'SUBTRACT',
   'THAN',
   'TIMES',
-  'TRIM',
   'UNSTRING',
   'UPON',
   'VALUE',
@@ -339,6 +338,14 @@ const tokenizeTopLevel = (part, tokens) => {
     return {
       consumed: 1,
       state: State.InsideSingleQuoteString,
+    }
+  }
+  const endProgramMatch = part.match(RE_END_PROGRAM)
+  if (endProgramMatch) {
+    pushToken(tokens, TokenType.KeywordControl, endProgramMatch[0].length)
+    return {
+      consumed: endProgramMatch[0].length,
+      state: State.TopLevelContent,
     }
   }
   const wordMatch = part.match(RE_WORD)

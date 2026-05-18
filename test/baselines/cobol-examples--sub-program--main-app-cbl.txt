@@ -410,7 +410,5 @@ Whitespace
 KeywordControl
 Whitespace
 VariableName
-Whitespace
-VariableName
 Punctuation
 NewLine

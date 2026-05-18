@@ -1,0 +1,5 @@
+Numeric
+Whitespace
+Function
+Whitespace
+VariableName
