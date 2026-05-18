@@ -24,6 +24,7 @@ export const TokenType = {
   None: 57,
   KeywordControl: 881,
   Numeric: 883,
+  FunctionName: 885,
   Keyword: 887,
   Comment: 888,
   PunctuationString: 889,
@@ -40,6 +41,7 @@ export const TokenMap = {
   [TokenType.None]: 'None',
   [TokenType.KeywordControl]: 'KeywordControl',
   [TokenType.Numeric]: 'Numeric',
+  [TokenType.FunctionName]: 'Function',
   [TokenType.Keyword]: 'Keyword',
   [TokenType.Comment]: 'Comment',
   [TokenType.PunctuationString]: 'PunctuationString',
@@ -141,8 +143,9 @@ const keywordOperators = new Set([
   'VALUE',
 ])
 
+const functionNames = new Set(['ACCEPT', 'DISPLAY', 'PERFORM'])
+
 const keywords = new Set([
-  'ACCEPT',
   'ADD',
   'ADDRESS',
   'ADVANCING',
@@ -173,7 +176,6 @@ const keywords = new Set([
   'DECLARE',
   'DELETE',
   'DEPENDING',
-  'DISPLAY',
   'DIVISION',
   'END-EXEC',
   'END-JSON',
@@ -264,6 +266,9 @@ const classifyWord = (value) => {
   const upper = value.toUpperCase()
   if (languageConstants.has(upper)) {
     return TokenType.LanguageConstant
+  }
+  if (functionNames.has(upper)) {
+    return TokenType.FunctionName
   }
   if (keywordControls.has(upper)) {
     return TokenType.KeywordControl
