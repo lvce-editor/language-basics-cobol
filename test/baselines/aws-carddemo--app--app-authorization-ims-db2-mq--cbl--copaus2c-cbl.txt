@@ -872,7 +872,7 @@ Whitespace
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 Whitespace
 NewLine
@@ -2081,7 +2081,7 @@ Whitespace
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 Whitespace
 NewLine

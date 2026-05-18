@@ -1737,7 +1737,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 Whitespace
 Numeric
@@ -1853,9 +1853,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-Numeric
-Punctuation
-Keyword
+Function
 Punctuation
 Whitespace
 Numeric
@@ -2116,9 +2114,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-Numeric
-Punctuation
-KeywordControl
+Function
 Punctuation
 Whitespace
 Numeric
@@ -2139,9 +2135,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-Numeric
-Punctuation
-VariableName
+Function
 Punctuation
 Whitespace
 Numeric
@@ -2199,7 +2193,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 Whitespace
 Numeric
@@ -2499,9 +2493,7 @@ Numeric
 NewLine
 Whitespace
 Whitespace
-Numeric
-Punctuation
-KeywordControl
+Function
 Punctuation
 Whitespace
 Numeric
@@ -2525,9 +2517,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-Numeric
-Punctuation
-VariableName
+Function
 Punctuation
 Whitespace
 Numeric
@@ -2573,7 +2563,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 Whitespace
 Numeric
@@ -2810,9 +2800,7 @@ Numeric
 NewLine
 Whitespace
 Whitespace
-Numeric
-Punctuation
-KeywordControl
+Function
 Punctuation
 Whitespace
 Numeric
@@ -2833,9 +2821,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-Numeric
-Punctuation
-VariableName
+Function
 Punctuation
 Whitespace
 Numeric
@@ -2989,9 +2975,7 @@ Numeric
 NewLine
 Whitespace
 Whitespace
-Numeric
-Punctuation
-KeywordControl
+Function
 Punctuation
 Whitespace
 Numeric
@@ -3009,9 +2993,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-Numeric
-Punctuation
-VariableName
+Function
 Punctuation
 Whitespace
 Numeric
@@ -3064,9 +3046,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-Numeric
-Punctuation
-KeywordControl
+Function
 Punctuation
 Whitespace
 Numeric

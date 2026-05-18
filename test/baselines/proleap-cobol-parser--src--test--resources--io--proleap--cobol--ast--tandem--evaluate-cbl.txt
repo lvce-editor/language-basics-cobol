@@ -17,7 +17,7 @@ PlainText
 PlainText
 PlainText
 PlainText
-VariableName
+Function
 Punctuation
 Whitespace
 VariableName
@@ -353,6 +353,6 @@ NewLine
 Whitespace
 PlainText
 PlainText
-VariableName
+Function
 Punctuation
 Whitespace

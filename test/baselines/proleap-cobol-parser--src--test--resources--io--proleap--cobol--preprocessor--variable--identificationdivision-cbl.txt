@@ -40,7 +40,7 @@ Punctuation
 NewLine
 Numeric
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 Numeric
@@ -51,7 +51,7 @@ Punctuation
 NewLine
 Numeric
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 Numeric

@@ -622,7 +622,7 @@ Punctuation
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 NewLine
@@ -1085,7 +1085,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 NewLine
@@ -1373,7 +1373,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 NewLine
@@ -2073,7 +2073,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 NewLine
@@ -2186,7 +2186,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 NewLine
@@ -2279,7 +2279,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 NewLine
@@ -2354,7 +2354,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 NewLine
@@ -2550,7 +2550,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 NewLine
@@ -2860,7 +2860,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 NewLine
@@ -3179,7 +3179,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 NewLine
@@ -3211,7 +3211,7 @@ Comment
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 NewLine
@@ -3284,7 +3284,7 @@ NewLine
 Whitespace
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 Whitespace

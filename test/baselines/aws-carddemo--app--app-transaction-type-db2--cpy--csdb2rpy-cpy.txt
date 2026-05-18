@@ -60,9 +60,7 @@ Comment
 NewLine
 Numeric
 Whitespace
-Numeric
-Punctuation
-VariableName
+Function
 Punctuation
 Whitespace
 Numeric
@@ -274,9 +272,7 @@ Numeric
 NewLine
 Numeric
 Whitespace
-Numeric
-Punctuation
-VariableName
+Function
 Punctuation
 Whitespace
 Numeric
@@ -309,9 +305,7 @@ Comment
 NewLine
 Numeric
 Whitespace
-Numeric
-Punctuation
-VariableName
+Function
 Punctuation
 Whitespace
 Numeric
@@ -581,9 +575,7 @@ Numeric
 NewLine
 Numeric
 Whitespace
-Numeric
-Punctuation
-VariableName
+Function
 Punctuation
 Whitespace
 Numeric

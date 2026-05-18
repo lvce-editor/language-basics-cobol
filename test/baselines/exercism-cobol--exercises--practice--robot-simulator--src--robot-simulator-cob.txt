@@ -99,12 +99,12 @@ Whitespace
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation
 NewLine
 NewLine
 NewLine
 Whitespace
 Whitespace
-VariableName
+Function
 Punctuation

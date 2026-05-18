@@ -67,6 +67,8 @@ const RE_PERFORM_TARGET = /^(perform)( +)([A-Za-z0-9][A-Za-z0-9_-]*)\b/i
 const RE_THRU_TARGET = /^(thru|through)( +)([A-Za-z0-9][A-Za-z0-9_-]*)\b/i
 const RE_ACCESS_MODE = /^(access)( +)(mode)\b/i
 const RE_FILE_STATUS = /^(file)( +)(status)\b/i
+const RE_PARAGRAPH_LABEL =
+  /^( +)?([A-Za-z0-9][A-Za-z0-9-]*-[A-Za-z0-9-]*)(\.)(?=\s|$)/i
 
 const languageConstants = new Set(['FALSE', 'NULL', 'NULLS', 'TRUE'])
 
@@ -552,6 +554,18 @@ export const tokenizeLine = (line, lineState) => {
       pushToken(tokens, TokenType.PlainText, 1)
     }
     index = 7
+  }
+
+  if (state === State.TopLevelContent) {
+    const paragraphLabelMatch = line.slice(index).match(RE_PARAGRAPH_LABEL)
+    if (paragraphLabelMatch && isCallableTarget(paragraphLabelMatch[2])) {
+      if (paragraphLabelMatch[1]) {
+        pushToken(tokens, TokenType.Whitespace, paragraphLabelMatch[1].length)
+      }
+      pushToken(tokens, TokenType.FunctionName, paragraphLabelMatch[2].length)
+      pushToken(tokens, TokenType.Punctuation, paragraphLabelMatch[3].length)
+      index += paragraphLabelMatch[0].length
+    }
   }
 
   while (index < line.length) {
